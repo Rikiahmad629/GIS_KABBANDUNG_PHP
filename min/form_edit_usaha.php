@@ -37,7 +37,7 @@
                 $latitude = $data['latitude'];
                 $id_kelurahan = $data['id_kelurahan'];
                 $sektor_usaha = $data['sektor_usaha'];
-                $id_kecamatan = $data['id_kecamatan'];
+                $id_kecamatan = $data['IDKecamatan'];
                 $id_kelurahan = $data['id_kelurahan'];
                 $nama_kelurahan = $data['nama_kelurahan'];
                 $latitude = $data['latitude'];
@@ -121,12 +121,21 @@
             </select>
           </div>
         </div>
-        <div class="form-group">
+		
+		<div class="form-group">
           <label for="sektor_usaha" class="col-sm-2 control-label">Sektor Usaha</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="sektor_usaha" name="sektor_usaha" placeholder="Sektor Usaha" value="<?php echo $sektor_usaha; ?>" required>
+            <select class="form-control" name="IDSektor" id="IDSektor">
+              <?php $query = "select Nama from sektor";
+                $data_query = mysql_query($query);
+                while($data = mysql_fetch_array($data_query)){
+              ?> 
+              <option value="<?php echo $data['Nama'];?>"><?php echo $data['Nama'];?></option>
+              <?php }?>
+            </select>
           </div>
         </div>
+		
           <div class="form-group">
           <label for="sektor_usaha" class="col-sm-2 control-label">Lokasi Usaha</label>
           <div class="col-sm-10">
