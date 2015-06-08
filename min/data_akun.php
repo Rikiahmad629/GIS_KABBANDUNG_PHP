@@ -38,7 +38,7 @@
 			        <td><?php echo $data['email'];?></td>
 			        <td><?php echo $data['tempat_lahir'];?></td>
 			         
-			   	  	<td>  <a href="#">Aktif</a></td>
+			   	  	<td> <?php if($data['active'] == 0){?> <a href="proses_aktivasi.php?id=<?php echo $data['id'];?>">Aktivasi</a><?php }else{?>Telah Aktif<?php }?></td>
 
 			        <td><a href="form_edit_akun.php?id=<?php echo $data['id'];?>">Edit</a>  
 			        	<a onclick="if(!confirm('Apakah Anda Yakin menghapus data usaha ini?')) return false;"href="proses_delete_akun.php?id=<?php echo $data['id'];?>">Delete</a>

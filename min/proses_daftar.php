@@ -1,5 +1,5 @@
 <?php
-include("config/koneksi.php");
+include("../config/koneksi.php");
 if($_FILES['fotoktp']['error']==0){
  	$file_type = array("jpg","PNG","jpeg");
  
@@ -7,7 +7,7 @@ if($_FILES['fotoktp']['error']==0){
 	 $extension = $info_path['extension'];
  	//ganti nama pake waktu sekarang
 	 $time = time();
- 	 $namafilebaru="images/ktp/".$time.".".$extension;
+ 	 $namafilebaru="../images/ktp/".$time.".".$extension;
 
 	$is_in_array = in_array($extension,$file_type,true);
  	if($is_in_array){
@@ -35,7 +35,7 @@ if($_FILES['fotoktp']['error']==0){
 					  '".$password."','".$alamat."','".$phone."','".$namafilebaru."',0)";
 				mysql_query($query);
 			 	?>
-			 	 <script type="text/javascript">alert("Sukses Daftar");window.location="index.php"</script>>
+			 	 <script type="text/javascript">alert("Sukses Daftar");window.location="data_akun.php"</script>>
 			 	<?php	
  			}
  			
