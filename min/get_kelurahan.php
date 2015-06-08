@@ -8,4 +8,3 @@
   ?> 
   <option value="<?php echo $data['IDKelurahan'];?>"><?php echo $data['Nama'];?></option>
   <?php }?>
- 
