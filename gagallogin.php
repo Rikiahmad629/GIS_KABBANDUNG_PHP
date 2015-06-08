@@ -5,7 +5,7 @@
     </div>
 
     <div class="container">
-       <h2>GAGAL LOGIN SILAHKAN COBA KEMBALI</h2>
+       <h2 align="center">GAGAL LOGIN SILAHKAN COBA KEMBALI</h2>
     </div>  
   </body>
 </html>
