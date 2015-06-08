@@ -2,7 +2,6 @@
 
   <body>
  	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-
        <?php include("../template/menu_atas_admin.php");?>
     </div>
  	<div class="container-fluid">
@@ -46,13 +45,13 @@
 			        <td><?php echo $data['nama_usaha'];?></td>
 			        <td><?php echo $data['produk_utama'];?></td>
 			        <td><?php echo $data['alamat_lengkap'];?></td>
-			         <td><?php echo $data['telp'];?></td>
+			        <td><?php echo $data['telp'];?></td>
 			       	<td><?php echo $data['sektor_usaha'];?></td>
-			   	 	<td><?php echo $data['skala_usaha'];?></td>
-			   	  	<td>  <a href="#">Detail</a></td>
+			   	<td><?php echo $data['skala_usaha'];?></td>
+			   	<td>  <a href="#">Detail</a></td>
 
 			        <td><a href="form_edit_usaha.php?id=<?php echo $data['id'];?>">Edit</a>  
-			        	<a onclick="if(!confirm('Apakah Anda Yakin menghapus data usaha ini?')) return false;"href="proses_delete_usaha.php?id=<?php echo $data['id'];?>">Delete</a>
+			        	<a onClick="if(!confirm('Apakah Anda Yakin menghapus data usaha ini?')) return false;"href="proses_delete_usaha.php?id=<?php echo $data['id'];?>">Delete</a>
 			        </td>
 			      </tr>
 			      <?php $i++; } ?>
@@ -65,8 +64,5 @@
         </div>
       </div>
     </div>
-
-   
-   
   </body>
 </html>
