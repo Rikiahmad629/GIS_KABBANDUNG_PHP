@@ -14,7 +14,7 @@
         	<a class="btn btn-primary" href="form_tambah_user.php">Tambah User </a>
       		<h2 class="sub-header">Daftar User</h2>
 			<div class="table-responsive">
-			  <table class="display" id="table-data-akun"  cellspacing="0" width="100%">
+			  <table class="display table table table-bordered" id="table-data-akun"  cellspacing="0" width="100%">
 			    <thead>
 			      <tr>
 			        <th>No</th>

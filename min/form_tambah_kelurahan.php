@@ -25,7 +25,14 @@
          <div class="form-group">
           <label for="IDKelurahan" class="col-sm-2 control-label">ID kelurahan</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="IDKelurahan" name="IDKelurahan" placeholder="IDKelurahan" required>
+             <select class="form-control" name="id_kecamatan" id="kecamatan">
+              <?php $query = "select * from Kecamatan where IDKabupaten = 31896";
+                $data_query = mysql_query($query);
+                while($data = mysql_fetch_array($data_query)){
+              ?> 
+              <option value="<?php echo $data['IDKecamatan'];?>"><?php echo $data['Nama'];?></option>
+              <?php }?>
+            </select>
           </div>
         </div>
 		<div class="form-group">

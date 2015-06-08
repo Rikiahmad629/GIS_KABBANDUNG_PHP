@@ -14,7 +14,7 @@
         	<a class="btn btn-primary" href="form_tambah_usaha.php">Tambah Usaha </a>
       		<h2 class="sub-header">Daftar Usaha</h2>
 			<div class="table-responsive">
-			  <table class="display" id="table-data-akun"  cellspacing="0" width="100%">
+			  <table class="display table table-bordered" id="table-data-akun"  cellspacing="0" width="100%">
 			    <thead>
 			      <tr>
 			        <th>No</th>

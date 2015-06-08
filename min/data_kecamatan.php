@@ -14,7 +14,7 @@
         	 <br> <a class="btn btn-primary" href="form_tambah_kecamatan.php">Tambah Kecamatan </a>
       		<h2 class="sub-header">Data Kecamatan di Bandung Barat</h2>
 			<div class="table-responsive">
-			  <table class="display" id="table-data-kecamatan"  cellspacing="0" width="41%">
+			  <table class="display table table-bordered" id="table-data-kecamatan"  cellspacing="0" width="41%">
 			    <thead>
 			      <tr>
 			        <th width="7%">No</th>

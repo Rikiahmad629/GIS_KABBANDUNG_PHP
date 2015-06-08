@@ -14,7 +14,7 @@
 		<br> <a class="btn btn-primary" href="form_tambah_kelurahan.php">Tambah Kelurahan </a>
         	 <h2>Data Kelurahan di Bandung Barat</h2>
 				<div class="table-responsive">
-			  <table class="display" id="table-data-kelurahan"  cellspacing="0" width="54%">
+			  <table class="display table table-bordered" id="table-data-kelurahan"  cellspacing="0" width="54%">
 			    <thead>
 			      <tr>
 			        <th width="7%">No</th>

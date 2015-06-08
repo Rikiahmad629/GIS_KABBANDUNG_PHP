@@ -12,8 +12,7 @@
             <?php include("../template/menu_samping_admin.php");?>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            
-          asd
+       
         </div>
       </div>
     </div>

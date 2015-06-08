@@ -14,7 +14,7 @@
         	<br> <a class="btn btn-primary" href="form_tambah_sektor.php">Tambah Sektor</a>
 			 <h2>DATA SEKTOR</h2>
 			      <div class="table-responsive">
-			  <table class="display" id="table-data-sektor"  cellspacing="0" width="41%">
+			  <table class="display table table-bordered" id="table-data-sektor"  cellspacing="0" width="41%">
 			    <thead>
 			      <tr>
 			        <th width="7%">No</th>
