@@ -1,4 +1,4 @@
-  <?php include("../template/header_admin.php");?>
+   <?php include("../template/header_admin.php");?>
 
   <body>
  	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -11,14 +11,46 @@
             <?php include("../template/menu_samping_admin.php");?>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-        	 <h2>DATA KECAMATAN</h2>
-			         
-
+        	 <br> <a class="btn btn-primary" href="form_tambah_kecamatan.php">Tambah Kecamatan </a>
+      		<h2 class="sub-header">Data Kecamatan di Bandung Barat</h2>
+			<div class="table-responsive">
+			  <table class="display" id="table-data-kecamatan"  cellspacing="0" width="41%">
+			    <thead>
+			      <tr>
+			        <th width="7%">No</th>
+			        <th width="29%">ID Kecamatan</th>
+			        <th width="38%">Nama Kecamatan</th>			    	
+			      	<th width="26%">Option</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			    <?php   
+			    if($_SESSION['level'] === "DINAS"){
+			    	$query = "select * from kecamatan 				
+								where IDKabupaten='31896'";
+			    }else{
+			    	echo ("data tidak ditemukan");	
+			    }
+			    
+			    $data_query = mysql_query($query) or die(mysql_error());
+			    $i = 1;
+			    while($data = mysql_fetch_array($data_query)){
+			    ?>
+			      <tr>
+			        <td><?php echo $i;?></td>
+			        <td><?php echo $data['IDKecamatan'];?></td>
+			        <td><?php echo $data['Nama'];?></td>			
+			        <td><a href="form_edit_kecamatan.php?id=<?php echo $data['IDKecamatan'];?>">Edit</a>  
+			        	<a onClick="if(!confirm('Apakah Anda Yakin ingin menghapus data ini?')) return false;"href="proses_delete_kecamatan.php?id=<?php echo $data['IDKecamatan'];?>">Delete</a>
+			        </td>
+			      </tr>
+			      <?php $i++; } ?>
+			    </tbody>
+			  </table>
+			</div>
+			       
         </div>
       </div>
     </div>
-
-   
-   
   </body>
 </html>
