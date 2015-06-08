@@ -78,7 +78,13 @@
           <label for="alamat" class="col-sm-2 control-label">Kelurahan/Desa</label>
           <div class="col-sm-10">
              <select class="form-control" name="id_kelurahan" id="id_kelurahan" required>
-              
+               <?php $query = "select * from kelurahan 		
+								where IDKecamatan in ('31897','31914','31922','31931','31945','31958','31970','31983','31994','32008','32019','32031','32046','32055','32067')";
+                $data_query = mysql_query($query);
+                while($data = mysql_fetch_array($data_query)){
+              ?> 
+              <option value="<?php echo $data['IDKelurahan'];?>"><?php echo $data['Nama'];?></option>
+              <?php }?>
             </select>
           </div>
         </div>
@@ -95,7 +101,14 @@
         <div class="form-group">
           <label for="sektor_usaha" class="col-sm-2 control-label">Sektor Usaha</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="sektor_usaha" name="sektor_usaha" placeholder="Sektor Usaha" required>
+            <select class="form-control" name="IDSektor" id="IDSektor">
+              <?php $query = "select Nama from sektor";
+                $data_query = mysql_query($query);
+                while($data = mysql_fetch_array($data_query)){
+              ?> 
+              <option value="<?php echo $data['IDSektor'];?>"><?php echo $data['Nama'];?></option>
+              <?php }?>
+            </select>
           </div>
         </div>
           <div class="form-group">
