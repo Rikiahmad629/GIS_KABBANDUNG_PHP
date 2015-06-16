@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Dashboard GIS </title>
+    <title>GIS Usaha Kab Bandung Barat </title>
 
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -26,13 +26,28 @@
    <script src="../js/bootstrap/bootstrap.min.js"></script>
     <script type="text/javascript" language="javascript" src="../js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" language="javascript" src="../js/dataTables.bootstrap.js"></script>
+
     <script type="text/javascript" charset="utf-8">
       $(document).ready(function() {
-        $('#table-data-akun').dataTable({
-          "iDisplayLength": 25
-        });
+        
+ $('#table-data-akun').dataTable({
+  "iDisplayLength": 25
+});
+ $('#table-data-sektor').dataTable({
+  "iDisplayLength": 10
+});
+  $('#table-data-kelurahan').dataTable({
+  "iDisplayLength": 10
+});
+ $('#table-data-kecamatan').dataTable({
+  "iDisplayLength": 10
+});
+
+ 
       } );
+
     </script>
+       <script src="../js/validator.min.js"></script>
     <style>
     .form-horizontal .control-label{
 /* text-align:right; */

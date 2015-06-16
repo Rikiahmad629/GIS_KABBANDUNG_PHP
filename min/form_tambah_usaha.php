@@ -3,7 +3,7 @@
   <body>
  <style>
       #map-canvas {
-        height: 200px;
+        height: 400px;
       
       }
       #message{
@@ -149,6 +149,19 @@
    
    <script type="text/javascript">
     $(document).ready(function() {
+
+       $("#kecamatan").on("change",function(e){
+        $("#id_kelurahan").empty();
+          $.ajax({
+            method: "POST",
+            url: "get_kelurahan.php",
+            data: { id_kecamatan:$(this).val()}
+          })
+          .done(function( msg ) {
+
+            $("#id_kelurahan").append(msg);
+          }); 
+      });
       var max_fields      = 10; //maximum input boxes allowed
       var wrapper         = $("#container-new-picture"); //Fields wrapper
       var add_button      = $("#tambah_gambar"); //Add button ID
@@ -218,18 +231,7 @@
  
       google.maps.event.addDomListener(window, 'load', initialize);
 
-      $("#kecamatan").on("change",function(e){
-        $("#id_kelurahan").empty();
-          $.ajax({
-            method: "POST",
-            url: "get_kelurahan.php",
-            data: { id_kecamatan:$(this).val()}
-          })
-          .done(function( msg ) {
-
-            $("#id_kelurahan").append(msg);
-          }); 
-      });
+     
        
 
 

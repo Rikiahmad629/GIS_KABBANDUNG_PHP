@@ -7,5 +7,8 @@
     <div class="container">
        <h2 align="center">GAGAL LOGIN SILAHKAN COBA KEMBALI</h2>
     </div>  
+       <script>
+    $("#formLogin").validator();
+   </script>
   </body>
 </html>

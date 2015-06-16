@@ -12,13 +12,14 @@
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         	<br> <a class="btn btn-primary" href="form_tambah_sektor.php">Tambah Sektor</a>
+        	<a class="btn btn-primary" href="#">Report XlS</a>
 			 <h2>DATA SEKTOR</h2>
 			      <div class="table-responsive">
-			  <table class="display table table-bordered" id="table-data-sektor"  cellspacing="0" width="41%">
+			  <table class="display table table-bordered" id="table-data-sektor"  cellspacing="0" width="100%">
 			    <thead>
 			      <tr>
 			        <th width="7%">No</th>
-			        <th width="29%">ID Sektor</th>
+			        
 			        <th width="38%">Nama Sektor</th>			    	
 			      	<th width="26%">Option</th>
 			      </tr>
@@ -36,11 +37,10 @@
 			    while($data = mysql_fetch_array($data_query)){
 			    ?>
 			      <tr>
-			        <td><?php echo $i;?></td>
-			        <td><?php echo $data['IDSektor'];?></td>
+			        <td><?php echo $i;?></td> 
 			        <td><?php echo $data['Nama'];?></td>			
-			        <td><a href="form_edit_sektor.php?id=<?php echo $data['IDSektor'];?>">Edit</a>  
-			        	<a onClick="if(!confirm('Apakah Anda Yakin ingin menghapus data ini?')) return false;"href="proses_delete_sektor.php?id=<?php echo $data['IDSektor'];?>">Delete</a>
+			        <td><a href="form_edit_sektor.php?id=<?php echo $data['IDSektor'];?>"><span class="glyphicon glyphicon-edit"></span></a>  
+			        	<a onClick="if(!confirm('Apakah Anda Yakin ingin menghapus data ini?')) return false;"href="proses_delete_sektor.php?id=<?php echo $data['IDSektor'];?>"><span class="glyphicon glyphicon-trash"></span></a>
 			        </td>
 			      </tr>
 			      <?php $i++; } ?>

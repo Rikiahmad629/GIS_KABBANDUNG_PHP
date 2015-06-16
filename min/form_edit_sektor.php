@@ -27,7 +27,7 @@
                 $q = mysql_query($query) or die(mysql_error());
                 $data = mysql_fetch_array($q);
              ?>
-        <form class="form-horizontal" method="POST" action="proses_edit_sektor.php"  enctype="multipart/form-data">
+        <form class="form-horizontal" method="POST" id="myForm" action="proses_edit_sektor.php"  enctype="multipart/form-data">
         <div class="form-group">
           <label for="edit_sektor" class="col-sm-2 control-label">ID Sektor</label>
           <div class="col-sm-10">
@@ -38,7 +38,8 @@
          <div class="form-group">
           <label for="Nama" class="col-sm-2 control-label">Nama</label>
           <div class="col-sm-10">
-           <textarea class="form-control" rows="3" id="Nama" name="Nama" required><?php echo $data['Nama'];?></textarea>
+           <textarea class="form-control" rows="3" id="Nama" name="Nama" data-error="Wajib Diisi" required><?php echo $data['Nama'];?></textarea>
+             <div class="help-block with-errors"></div>
           </div>
         </div>
         <div class="form-group">
@@ -51,4 +52,7 @@
       </div>
     </div>
   </body>
+     <script>
+$('#myForm').validator();
+</script>
 </html>

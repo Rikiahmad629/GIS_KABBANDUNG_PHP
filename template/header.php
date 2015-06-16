@@ -8,11 +8,12 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>GIS Usaha  Bandung Barat</title>
+    <title>GIS Usaha Kab Bandung Barat</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap/navbar-fixed-top.css" rel="stylesheet">
+    
     <style>
       #map-canvas {
         height: 500px;
@@ -24,5 +25,6 @@
     </style>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
-   
+   <script src="js/validator.min.js"></script>
+
   </head>

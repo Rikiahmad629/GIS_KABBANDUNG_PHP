@@ -6,7 +6,7 @@
 	    <span class="icon-bar"></span>
 	    <span class="icon-bar"></span>
 	  </button>
-	  <a class="navbar-brand" href="#">Sistem Informasi Geografis Usaha Kab. Bandung Barat</a>
+	  <a class="navbar-brand" href="#"><img src="../images/logo.png" style="vertical-align:top; margin-top:-12px;">Sistem Informasi Geografis Usaha Kab. Bandung Barat</a>
 	</div>
 	<div class="navbar-collapse collapse">
 	  <ul class="nav navbar-nav navbar-right">

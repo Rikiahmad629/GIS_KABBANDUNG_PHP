@@ -12,9 +12,10 @@
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         	 <br> <a class="btn btn-primary" href="form_tambah_kecamatan.php">Tambah Kecamatan </a>
+        	 <a class="btn btn-primary" href="#">Report XlS</a>
       		<h2 class="sub-header">Data Kecamatan di Bandung Barat</h2>
 			<div class="table-responsive">
-			  <table class="display table table-bordered" id="table-data-kecamatan"  cellspacing="0" width="41%">
+			  <table class="display table table-bordered" id="table-data-kecamatan"  cellspacing="0" width="100%">
 			    <thead>
 			      <tr>
 			        <th width="7%">No</th>
@@ -40,8 +41,8 @@
 			        <td><?php echo $i;?></td>
 			        <td><?php echo $data['IDKecamatan'];?></td>
 			        <td><?php echo $data['Nama'];?></td>			
-			        <td><a href="form_edit_kecamatan.php?id=<?php echo $data['IDKecamatan'];?>">Edit</a>  
-			        	<a onClick="if(!confirm('Apakah Anda Yakin ingin menghapus data ini?')) return false;"href="proses_delete_kecamatan.php?id=<?php echo $data['IDKecamatan'];?>">Delete</a>
+			        <td><a href="form_edit_kecamatan.php?id=<?php echo $data['IDKecamatan'];?>"><span class="glyphicon glyphicon-edit"></span></a>  
+			        	<a onClick="if(!confirm('Apakah Anda Yakin ingin menghapus data ini?')) return false;"href="proses_delete_kecamatan.php?id=<?php echo $data['IDKecamatan'];?>"><span class="glyphicon glyphicon-trash"></span></a>
 			        </td>
 			      </tr>
 			      <?php $i++; } ?>

@@ -21,11 +21,12 @@
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h2>Form Tambah Sektor</h2>
-         <form class="form-horizontal" method="POST" action="proses_tambah_sektor.php"  enctype="multipart/form-data">
+         <form class="form-horizontal" method="POST" id="myForm" action="proses_tambah_sektor.php"  enctype="multipart/form-data">
 		<div class="form-group">
           <label for="nama" class="col-sm-2 control-label">Nama Sektor :</label>
           <div class="col-sm-10">
-          <input type="text" class="form-control" id="Nama" name="Nama" placeholder="Nama" required>
+          <input type="text" class="form-control" id="Nama" name="Nama" data-error="Wajib Diisi"  placeholder="Nama" required>
+           <div class="help-block with-errors"></div>
           </div>
         </div>
         <div class="form-group">
@@ -38,4 +39,5 @@
       </div>
     </div>
   </body>
+
 </html>

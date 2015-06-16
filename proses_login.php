@@ -5,7 +5,7 @@
 	$username = $_POST['no_ktp'];
 	$password = $_POST['password'];
 	 
- 	$sql = "select * from users where no_ktp ='".$username."' and password='".$password."'";
+ 	$sql = "select * from users where no_ktp ='".$username."' and password='".$password."' and active ='1' ";
 	$res = mysql_query($sql) or die(mysql_error());
   	mysql_num_rows($res);
 	if(mysql_num_rows($res) == 1){

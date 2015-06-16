@@ -3,7 +3,7 @@
   <body>
  <style>
       #map-canvas {
-        height: 200px;
+     height: 400px;
       
       }
       #message{

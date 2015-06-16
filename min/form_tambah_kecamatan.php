@@ -21,7 +21,7 @@
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h2>Form Tambah Kecamatan</h2>
-         <form class="form-horizontal" method="POST" action="proses_tambah_kecamatan.php"  enctype="multipart/form-data">
+         <form class="form-horizontal" method="POST" id="myForm" action="proses_tambah_kecamatan.php"  enctype="multipart/form-data">
          <div class="form-group">
           
           <div class="col-sm-10">
@@ -31,7 +31,8 @@
 		<div class="form-group">
           <label for="Nama" class="col-sm-2 control-label">Nama Kecamatan</label>
           <div class="col-sm-10">
-          <input type="text" class="form-control" id="Nama" name="Nama" placeholder="Nama" required>
+          <input type="text" class="form-control" id="Nama" name="Nama" placeholder="Nama" data-error="Wajib Diisi" required>
+          <div class="help-block with-errors"></div>
           </div>
         </div>
         <div class="form-group">
@@ -44,4 +45,8 @@
       </div>
     </div>
   </body>
+
+    <script>
+$('#myForm').validator();
+</script>
 </html>
