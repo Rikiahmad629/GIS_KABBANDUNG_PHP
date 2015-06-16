@@ -11,10 +11,18 @@
 	if(mysql_num_rows($res) == 1){
 		$data  = mysql_fetch_array($res);
 		
+		$_SESSION['no_ktp'] = $data['no_ktp'];
 		$_SESSION['nama'] = $data['nama'];
-		$_SESSION['id'] = $data['id'];
+		$_SESSION['alamat'] = $data['alamat'];
+		$_SESSION['tanggal_lahir'] = $data['tanggal_lahir'];
+		$_SESSION['tempat_lahir'] = $data['tempat_lahir'];
+		$_SESSION['username'] = $data['username'];
+		$_SESSION['password'] = $data['password'];
+		$_SESSION['email'] = $data['email'];
+		$_SESSION['phone'] = $data['phone'];
 		$_SESSION['level'] = $data['level'];
-	 	$_SESSION['sudahlogin'] = true;		
+		$_SESSION['id'] = $data['id'];
+		$_SESSION['sudahlogin'] = true;		
 		 header("location:min/index.php");
 	}else{
 		header("location:gagallogin.php");
